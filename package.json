@@ -1,0 +1,30 @@
+{
+  "name": "es6-pong",
+  "version": "1.0.0",
+  "description": "pong game using es6 features, adapted from https://github.com/jakesgordon/javascript-pong",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node_modules/webpack-dev-server/bin/webpack-dev-server.js"
+  },
+  "author": "Will Myers",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer-loader": "^2.0.0",
+    "babel-core": "^6.1.2",
+    "babel-loader": "^6.0.1",
+    "babel-preset-es2015": "^6.1.2",
+    "babel-preset-stage-0": "^6.3.13",
+    "css-loader": "^0.15.1",
+    "less": "^2.5.1",
+    "less-loader": "^2.2.0",
+    "less-plugin-npm-import": "^2.1.0",
+    "node-libs-browser": "^0.5.2",
+    "style-loader": "^0.12.3",
+    "webpack": "^1.10.0",
+    "webpack-dev-server": "^1.10.1",
+    "write-file-webpack-plugin": "^2.1.1"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.3.14"
+  }
+}
