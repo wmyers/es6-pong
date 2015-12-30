@@ -7,6 +7,7 @@ module.exports = {
     'babel-polyfill',
     './src/game/pong.less',
     './src/index.js',
+    './lib/fpsmeter.min.js',
     'webpack-dev-server/client?http://localhost:8080'
   ],
   output: {

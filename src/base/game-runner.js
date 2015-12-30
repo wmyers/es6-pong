@@ -21,12 +21,12 @@ export function GameRunner(cfg) {
       step     = 1/cfg.fps,
       slowStep = slow * step,
       update   = cfg.update,
-      render   = cfg.render;
+      render   = cfg.render,
       //currently a module in the global space
-      // fpsmeter = new FPSMeter(cfg.fpsmeter || { decimals: 0, graph: true, theme: 'dark', left: '5px' });
+      fpsmeter = new FPSMeter(cfg.fpsmeter || { decimals: 0, graph: true, theme: 'dark', left: '5px' });
 
   let frame = function() {
-    // fpsmeter.tickStart();
+    fpsmeter.tickStart();
     now = timestamp();
     dt = dt + Math.min(1, (now - last) / 1000);
     while(dt > slowStep) {
@@ -35,7 +35,7 @@ export function GameRunner(cfg) {
     }
     render(dt/slow);
     last = now;
-    // fpsmeter.tick();
+    fpsmeter.tick();
     requestAnimationFrame(frame, cfg.canvas);
   }
 
